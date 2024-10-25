@@ -4,14 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Turbo Levo Dashboard</title>
-    
-    <!-- Modifichiamo il percorso del CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    
-    <!-- Modifichiamo i percorsi delle icone -->
     <link rel="apple-touch-icon" href="./icons/icon-192x192.png">
-    
-    <!-- Modifichiamo il percorso del manifest -->
     <link rel="manifest" href="./manifest.json">
 </head>
-<!-- Il resto del file rimane uguale -->
+<body>
+    <div class="dashboard">
+        <div class="speed-section">
+            <div class="speedometer">
+                <div class="speed-display">
+                    <div class="speed-number">0</div>
+                    <div class="speed-unit">km/h</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="metrics-section">
+            <div class="metric-card">
+                <h3>Batteria</h3>
+                <div id="battery" class="metric-value">0%</div>
+                <div class="led-container battery-segments">
+                    <!-- Aggiungiamo 10 segmenti LED -->
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <h3>Livello Assistenza</h3>
+                <div id="assist-level" class="metric-value">ECO</div>
+                <div class="led-container assist-levels">
+                    <!-- 3 livelli di assistenza -->
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <h3>Potenza</h3>
+                <div id="power" class="metric-value">0 W</div>
+                <div class="led-container power-segments">
+                    <!-- 8 segmenti per la potenza -->
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <h3>Cadenza</h3>
+                <div id="cadence" class="metric-value">0</div>
+                <div>RPM</div>
+            </div>
+
+            <div class="metric-card">
+                <h3>Pendenza</h3>
+                <div id="slope" class="metric-value">0%</div>
+                <div class="led-container slope-segments">
+                    <!-- 5 segmenti per la pendenza -->
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                    <div class="led-segment"></div>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <h3>Autonomia</h3>
+                <div id="range" class="metric-value">0</div>
+                <div>km</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

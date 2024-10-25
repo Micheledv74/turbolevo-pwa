@@ -1,0 +1,189 @@
+/* Reset e stili base */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Forza orientamento orizzontale */
+@media screen and (orientation: portrait) {
+    body {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        height: 100vw;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+}
+
+/* Layout principale */
+.dashboard {
+    display: flex;
+    width: 812px;
+    height: 375px;
+    padding: 10px;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+/* Sezione velocità */
+.speed-section {
+    flex: 1;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 320px;
+    position: relative;
+}
+
+.speedometer {
+    width: 300px;
+    height: 240px;
+    position: relative;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speed-gauge {
+    width: 100%;
+    height: 100%;
+}
+
+.speed-display {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.speed-number {
+    font-size: 58px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    margin: 0;
+    line-height: 1;
+}
+
+.speed-unit {
+    font-size: 22px;
+    color: rgba(255,255,255,0.7);
+    margin-top: 10px;
+}
+/* Sezione metriche */
+.metrics-section {
+    flex: 2;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 520px;
+}
+
+.metric-card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h3 {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+.metric-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 4px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Stile LED comune */
+.led-container {
+    display: flex;
+    gap: 2px;
+    width: 100%;
+    margin: 4px 0;
+}
+
+.led-segment {
+    flex: 1;
+    height: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+/* Stili per gli indicatori */
+
+/* Batteria */
+.battery-segments .led-segment {
+  background-color: #4CAF50; /* Verde */
+}
+
+.battery-segments .led-segment.low {
+  background-color: #FFA500; /* Arancione */
+}
+
+.battery-segments .led-segment.critical {
+  background-color: #FF0000; /* Rosso */
+}
+
+/* Livello assistenza */
+.assist-levels .led-segment {
+  background-color: #4CAF50; /* Verde */
+}
+
+.assist-levels .led-segment.medium {
+  background-color: #FFA500; /* Arancione */
+}
+
+.assist-levels .led-segment.high {
+  background-color: #FF0000; /* Rosso */
+}
+
+/* Potenza */
+.power-segments .led-segment {
+  background-color: #4CAF50; /* Verde */
+}
+
+.power-segments .led-segment.medium {
+  background-color: #FFA500; /* Arancione */
+}
+
+.power-segments .led-segment.high {
+  background-color: #FF0000; /* Rosso */
+}
+
+/* Pendenza */
+.slope-segments .led-segment {
+  background-color: #4CAF50; /* Verde */
+}
+
+.slope-segments .led-segment.medium {
+  background-color: #FFA500; /* Arancione */
+}
+
+.slope-segments .led-segment.high {
+  background-color: #FF0000; /* Rosso */
+}
